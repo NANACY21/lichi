@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--线性布局，该布局内的组件竖直放置-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/tv_mainUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="主界面"/>
+
+
+    <TextView
+        android:id="@+id/tv_myHobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人爱好"
+        />
+
+    <CheckBox
+        android:id="@+id/sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="50px"
+        android:width="100dp"
+        android:text="运动"
+        />
+
+    <CheckBox
+        android:id="@+id/study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="50px"
+        android:width="100dp"
+        android:text="学习"
+        />
+
+    <CheckBox
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="50px"
+        android:width="100dp"
+        android:text="看书"
+        />
+
+    <CheckBox
+        android:id="@+id/swim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="50px"
+        android:width="100dp"
+        android:text="爬山"
+        />
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="50px"
+        android:width="100dp"
+        android:text="确定" />
+
+    <Button
+        android:id="@+id/bt_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+
+        android:onClick="click"
+        android:text="跳转到Main2Activity" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:text="hello" />
+
+    <Button
+        android:onClick="click2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+    <EditText
+        android:id="@+id/et_Num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:hint="输入第1个整数"
+        />
+
+    <EditText
+        android:id="@+id/et_Num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:hint="输入第2个整数" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:onClick="MusicPlayer"
+        android:text="音乐播放器" />
+
+    <Button
+        android:id="@+id/bt_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:onClick="sum"
+        android:text="两数之和" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""/>
+
+</LinearLayout>

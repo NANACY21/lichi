@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--线性布局，该布局内的组件竖直放置-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <EditText
+        android:id="@+id/et_shuru"
+        android:layout_width="174dp"
+        android:hint="请输入内容"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="shiyan1"
+        android:text="确定"/>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lichi">
+    <!--<uses-sdk android:minSdkVersion="28"/>-->
+
+    <!--在清单文件中添加该APP所需的权限，比如是否允许访问sd卡、网络
+    权限需要记-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <!--intent-filter是对activity的描述-->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SqliteActivity"></activity>
+        <activity android:name=".FilestoreActivity" />
+        <activity android:name=".MusicPlayerActivity" />
+        <activity android:name=".BindServiceActivity" />
+        <activity android:name=".PhoneListenerActivity" />
+        <activity android:name=".shiyanFuzhuActivity" />
+        <activity android:name=".PersonActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".OutGoingCallActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OtherActivity"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="aa.bb.cc.dd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LaunchModeActivity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".TemplateActivity" />
+
+        <!--需要自己写广播接收者-->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <!--调频
+                记住以下一些广播频道-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".OutGoingCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".CdCardReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".PhoneService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
+<!--.xml .ini .config .properties 偏好 配置文件-->
